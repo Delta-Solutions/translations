@@ -2,9 +2,9 @@
 
 namespace DeltaSolutions\Translations\Tests;
 
+use DeltaSolutions\Translations\TranslationsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use DeltaSolutions\Translations\TranslationsServiceProvider;
 
 class TestCase extends Orchestra
 {
