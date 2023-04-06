@@ -2,7 +2,6 @@
 
 namespace DeltaSolutions\Translations;
 
-use DeltaSolutions\Translations\Commands\TranslationsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
