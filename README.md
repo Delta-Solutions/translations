@@ -1,7 +1,6 @@
-# This is my package translations
+# Translation loader
 
-
-This package provides a migration and a model to extend the Spatie LanguageLine .... 
+This package provides a migration and a model to extend the spatie/laravel-translation-loader so you can use columns for your labels.  One column per locale.
 
 
 ## Installation
@@ -12,6 +11,14 @@ You can install the package via composer:
 composer require delta-solutions/translations
 ```
 
+Follow the installation steps as explained in the Spatie docs https://github.com/spatie/laravel-translation-loader
+
+Define the locales in the `translation-loader.php` config file, one locale per database column.  This is used in the migration to create the database fields.
+
+```
+ 'locales' => ['nl', 'fr', 'en', 'de']   
+```
+
 You can publish and run the migrations with:
 
 ```bash
@@ -19,14 +26,12 @@ php artisan vendor:publish --tag="translations-migrations"
 php artisan migrate
 ```
 
-## Usage
-
-Beter te schrijven ---> change your model to the model of this package , provide an array of locales in the spatie config , add these locales before you run your migrations 
+Use the model from this package as the model for the spatie/laravel-translation-loader. This is configured via the `model` in the config. Change it to
 
 ```
-    'locales' => ['nl', 'fr', 'en', 'de']
-   
+ 'model' => DeltaSolutions\Translations\Models\LanguageLine::class,
 ```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
