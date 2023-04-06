@@ -29,10 +29,9 @@ php artisan migrate
 Use the model from this package as the model for the spatie/laravel-translation-loader. This is configured via the `model` in the config. Change it to
 
 ```
- 'model'               =>  DeltaSolutions\Translations\Models\LanguageLine::class,
+ 'model' => DeltaSolutions\Translations\Models\LanguageLine::class,
 ```
 
-use DeltaSolutions\Translations\Models\LanguageLine;
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
