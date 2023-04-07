@@ -12,6 +12,8 @@ return new class extends Migration
            collect(config('translation-loader.locales'))->each(function ($locale) use ($table) {
                $table->text($locale);
            });
+
+            $table->json('text')->nullable()->change();
         });
     }
 };
