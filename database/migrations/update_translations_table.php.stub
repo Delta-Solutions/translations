@@ -9,7 +9,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('language_lines', function (Blueprint $table) {
-           collect(config('translation-loader.locales'))->each(function ($locale) use ($table) {
+           collect(config('translation-loader.locales'))->reverse()->each(function ($locale) use ($table) {
                $table->text($locale)->after('text');
            });
 
