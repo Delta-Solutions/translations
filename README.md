@@ -1,19 +1,7 @@
-# This is my package translations
+# Translation loader
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/delta-solutions/translations.svg?style=flat-square)](https://packagist.org/packages/delta-solutions/translations)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/delta-solutions/translations/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/delta-solutions/translations/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/delta-solutions/translations/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/delta-solutions/translations/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/delta-solutions/translations.svg?style=flat-square)](https://packagist.org/packages/delta-solutions/translations)
+This package provides a migration and a model to extend the spatie/laravel-translation-loader so you can use columns for your labels.  One column per locale.
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/translations.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/translations)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -23,6 +11,14 @@ You can install the package via composer:
 composer require delta-solutions/translations
 ```
 
+Follow the installation steps as explained in the Spatie docs https://github.com/spatie/laravel-translation-loader
+
+Define the locales in the `translation-loader.php` config file, one locale per database column.  This is used in the migration to create the database fields.
+
+```
+ 'locales' => ['nl', 'fr', 'en', 'de']   
+```
+
 You can publish and run the migrations with:
 
 ```bash
@@ -30,36 +26,10 @@ php artisan vendor:publish --tag="translations-migrations"
 php artisan migrate
 ```
 
-You can publish the config file with:
+Use the model from this package as the model for the spatie/laravel-translation-loader. This is configured via the `model` in the config. Change it to
 
-```bash
-php artisan vendor:publish --tag="translations-config"
 ```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="translations-views"
-```
-
-## Usage
-
-```php
-$translations = new DeltaSolutions\Translations();
-echo $translations->echoPhrase('Hello, DeltaSolutions!');
-```
-
-## Testing
-
-```bash
-composer test
+ 'model' => DeltaSolutions\Translations\Models\LanguageLine::class,
 ```
 
 ## Changelog
