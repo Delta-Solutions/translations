@@ -16,7 +16,7 @@ Follow the installation steps as explained in the Spatie docs https://github.com
 Define the locales in the `translation-loader.php` config file, one locale per database column.  This is used in the migration to create the database fields.
 
 ```
- 'locales' => ['nl', 'fr', 'en', 'de']   
+ 'locales' => ['nl', 'fr', 'en', 'de', 'es']   
 ```
 
 You can publish and run the migrations with:
