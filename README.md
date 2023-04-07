@@ -29,6 +29,10 @@ php artisan vendor:publish --tag="translations-migrations"
 php artisan migrate
 ```
 
+This will create the fields in your database as specified in the locales array
+
+![example of table](https://github.com/Delta-Solutions/assets/blob/main/translations/table_example.png)
+
 Use the model from this package as the model for the spatie/laravel-translation-loader. This is configured via the `model` in the config. Change it to
 
 ```
