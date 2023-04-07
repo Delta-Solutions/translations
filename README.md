@@ -1,3 +1,6 @@
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/delta-solutions/translations.svg?style=flat-square)](https://packagist.org/packages/delta-solutions/translations)
+[![Total Downloads](https://img.shields.io/packagist/dt/delta-solutions/translations.svg?style=flat-square)](https://packagist.org/packages/delta-solutions/translations)
+
 # Translation loader
 
 This package provides a migration and a model to extend the spatie/laravel-translation-loader so you can use columns for your labels.  One column per locale.
@@ -16,7 +19,7 @@ Follow the installation steps as explained in the Spatie docs https://github.com
 Define the locales in the `translation-loader.php` config file, one locale per database column.  This is used in the migration to create the database fields.
 
 ```
- 'locales' => ['nl', 'fr', 'en', 'de']   
+ 'locales' => ['nl', 'fr', 'en', 'de', 'es']   
 ```
 
 You can publish and run the migrations with:
