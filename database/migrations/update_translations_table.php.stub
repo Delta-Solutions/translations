@@ -16,4 +16,12 @@ return new class extends Migration
             $table->json('text')->nullable()->change();
         });
     }
+
+        public function down()
+        {
+            Schema::table('language_lines', function (Blueprint $table) {
+               $table->dropColumn(config('translation-loader.locales'));
+               $table->json('text')->nullable(false)->change();
+            });
+        }
 };
