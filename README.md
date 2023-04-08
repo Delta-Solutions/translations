@@ -1,9 +1,9 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/delta-solutions/translations.svg?style=flat-square)](https://packagist.org/packages/delta-solutions/translations)
 [![Total Downloads](https://img.shields.io/packagist/dt/delta-solutions/translations.svg?style=flat-square)](https://packagist.org/packages/delta-solutions/translations)
 
-# Translation loader
+# Translations in columns loader
 
-This package provides a migration and a model to extend the spatie/laravel-translation-loader so you can use columns for your labels.  One column per locale.
+This package provides a migration and a model to extend the spatie/laravel-translation-loader so you can store your translations in columns instead of one json field.  One column per locale.
 
 
 ## Installation
