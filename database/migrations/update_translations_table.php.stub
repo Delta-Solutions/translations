@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::table('language_lines', function (Blueprint $table) {
            collect(config('translation-loader.locales'))->reverse()->each(function ($locale) use ($table) {
-               $table->text($locale)->after('text');
+               $table->text($locale)->nullable()->after('text');
            });
 
             $table->json('text')->nullable()->change();
