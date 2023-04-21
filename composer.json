@@ -1,6 +1,6 @@
 {
     "name": "delta-solutions/translations",
-    "description": "This is my package translations",
+    "description": "Store your spatie/laravel-translation-loader powered translations in columns instead of in a json field",
     "keywords": [
         "Delta-Solutions",
         "laravel",
