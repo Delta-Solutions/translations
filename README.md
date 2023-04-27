@@ -1,3 +1,5 @@
+![Translations](https://banners.beyondco.de/translations.png?theme=light&packageManager=composer+require&packageName=delta-solutions%2Ftranslations&pattern=architect&style=style_1&description=Store+your+spatie%2Flaravel-translation-loader+powered+translations+in+columns+instead+of+in+a+json+field&md=1&showWatermark=1&fontSize=100px&images=flag&widths=auto)
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/delta-solutions/translations.svg?style=flat-square)](https://packagist.org/packages/delta-solutions/translations)
 [![Total Downloads](https://img.shields.io/packagist/dt/delta-solutions/translations.svg?style=flat-square)](https://packagist.org/packages/delta-solutions/translations)
 
